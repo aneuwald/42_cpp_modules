@@ -6,15 +6,14 @@
 #    By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 17:18:31 by acanterg          #+#    #+#              #
-#    Updated: 2022/02/08 14:27:05 by acanterg         ###   ########.fr        #
+#    Updated: 2022/02/08 14:27:01 by acanterg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp \
-      Contact.class.cpp \
-	  PhoneBook.class.cpp
+SRC = tests.cpp \
+      Account.cpp
       
-NAME = myphonebook
+NAME = thejobofmydreams
 CC = clang++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
