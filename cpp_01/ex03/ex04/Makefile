@@ -6,7 +6,7 @@
 #    By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 17:18:31 by acanterg          #+#    #+#              #
-#    Updated: 2022/02/09 11:54:47 by acanterg         ###   ########.fr        #
+#    Updated: 2022/02/08 20:50:35 by acanterg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ $(NAME):
 			@$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 test:		re
-			./$(NAME) file 42 42.999
+			./$(NAME) file 42 ALEXANDRE
 
 all:		$(NAME)
 
