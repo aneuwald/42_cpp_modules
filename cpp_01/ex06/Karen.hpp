@@ -6,12 +6,12 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:47:21 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/09 12:28:01 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/02/09 15:53:02 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FILE_HPP
-# define FILE_HPP
+#ifndef KAREN_HPP
+# define KAREN_HPP
 
 # include <iostream>
 
