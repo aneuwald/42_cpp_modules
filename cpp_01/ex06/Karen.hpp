@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   File.hpp                                           :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:47:21 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/08 21:52:36 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/02/09 12:28:01 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,30 @@
 # define FILE_HPP
 
 # include <iostream>
-# include <fstream>
-# include <sstream>
-# include <string>
 
-#define C_RED "\033[1;31m"
-#define C_GREEN "\033[1;32m"
-#define C_YELLOW "\033[1;33m"
-#define C_END "\033[0m"
+# define C_RED "\033[1;31m"
+# define C_GREEN "\033[1;32m"
+# define C_YELLOW "\033[1;33m"
+# define C_BLUE "\033[1;34m"
+# define C_MAGENTA "\033[1;35m"
+# define C_CYAN "\033[1;36m"
+# define C_END "\033[0m"
 
-class File {
+# define MAX_OPTIONS 4
+
+class Karen {
 
 private:
-	std::string _filename;
-	std::string _content;
-	std::string _newContent;
+	void debug();
+	void info();
+	void warning();
+	void error();
 	
 public:
-	File();
-	~File();
+	Karen();
+	~Karen();
 
-	bool openFile(std::string filename);
-	void replaceContent(std::string s1, std::string s2, std::size_t start = 0);
-	void printContent();
-	void printNewContent();
-	bool exportNewContent();
+	void complain(std::string level);
 };
 
 #endif

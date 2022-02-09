@@ -6,14 +6,14 @@
 #    By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 17:18:31 by acanterg          #+#    #+#              #
-#    Updated: 2022/02/08 20:50:35 by acanterg         ###   ########.fr        #
+#    Updated: 2022/02/09 13:17:03 by acanterg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = main.cpp \
-	  File.cpp
+	  Karen.cpp
       
-NAME =  SedIsForLosers
+NAME =  karenFilter
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -21,7 +21,7 @@ $(NAME):
 			@$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 test:		re
-			./$(NAME) file 42 ALEXANDRE
+			./$(NAME) DEBUG
 
 all:		$(NAME)
 
