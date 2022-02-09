@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 13:26:33 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/08 14:26:48 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/02/08 16:32:42 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,50 +130,7 @@ void	Account::_displayTimestamp() {
 	//std::cout << "[19920104_091532] ";
 }
 
-
 int	Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;
 int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
-
-
-
-// class Account {
-
-
-// public:
-
-// 	typedef Account		t;
-
-// 	static int	getNbAccounts( void );
-// 	static int	getTotalAmount( void );
-// 	static int	getNbDeposits( void );
-// 	static int	getNbWithdrawals( void );
-// 	static void	displayAccountsInfos( void );
-
-// 	Account( int initial_deposit );
-// 	~Account( void );
-
-// 	void	makeDeposit( int deposit );
-// 	bool	makeWithdrawal( int withdrawal );
-// 	int		checkAmount( void ) const;
-// 	void	displayStatus( void ) const;
-
-
-// private:
-
-// 	static int	_nbAccounts;
-// 	static int	_totalAmount;
-// 	static int	_totalNbDeposits;
-// 	static int	_totalNbWithdrawals;
-
-// 	static void	_displayTimestamp( void );
-
-// 	int				_accountIndex;
-// 	int				_amount;
-// 	int				_nbDeposits;
-// 	int				_nbWithdrawals;
-
-// 	Account( void );
-
-// };

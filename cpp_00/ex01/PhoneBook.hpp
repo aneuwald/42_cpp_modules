@@ -1,41 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.class.hpp                                  :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/07 17:57:59 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/08 00:47:57 by acanterg         ###   ########.fr       */
+/*   Created: 2022/02/07 17:57:11 by acanterg          #+#    #+#             */
+/*   Updated: 2022/02/08 21:01:42 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_CLASS_HPP
-# define CONTACT_CLASS_HPP
+#ifndef PHONE_BOOK_HPP
+# define PHONE_BOOK_HPP
 
 # include <iostream>
 # include <iomanip>
 # include <string>
+# include "Contact.hpp"
 
-class Contact {
+# define MAX_CONTACTS 8
+
+# define C_RED "\033[1;31m"
+# define C_GREEN "\033[1;32m"
+# define C_YELLOW "\033[1;33m"
+# define C_END "\033[0m"
+
+class PhoneBook {
 
 private:
-	int _id;
-	std::string _firstName;
-	std::string _lastName;
-	std::string _nickname;
-	std::string _phoneNumber;
-	std::string _darkestSecret;
+	Contact _contacts[MAX_CONTACTS];
+	int		_size;
 
-	std::string getCompact(std::string attr);
+	void _printAll();
+
 
 public:
-	Contact();
-	~Contact();
+	PhoneBook();
+	~PhoneBook();
+	
+	void add();
+	void search();
 
-	void create(int i);
-	void show();
-	void showFull();
 };
 
 #endif

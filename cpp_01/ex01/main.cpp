@@ -5,32 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/07 18:02:01 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/08 21:15:44 by acanterg         ###   ########.fr       */
+/*   Created: 2022/02/08 16:53:14 by acanterg          #+#    #+#             */
+/*   Updated: 2022/02/08 17:19:28 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
-#include "PhoneBook.hpp"
+#include "Zombie.hpp"
 
-int main()
-{
-	PhoneBook pb;
-	std::string cmd;
+int	main() {
 
-	while(1)
-	{
-		std::cout << C_GREEN << "Enter a command: " << C_END;
-		std::getline(std::cin >> std::ws, cmd);
-		if (cmd == "EXIT")
-			break;
-		else if (cmd == "ADD")
-			pb.add();
-		else if (cmd == "SEARCH")
-			pb.search();
-		else
-			std::cout << C_RED << "Command not found: " << cmd << " - Try ADD, SEARCH or EXIT" << C_END << std::endl;
-	}
+	Zombie *zombies = zombieHorde(4, "José"); 
+
+	(*zombies).announce();
+	zombies[3].announce();
 	
-	return (0);
+	delete [] zombies;
+
+	return 0;
 }
+

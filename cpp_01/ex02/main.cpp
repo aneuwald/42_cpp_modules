@@ -5,32 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/07 18:02:01 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/08 21:15:44 by acanterg         ###   ########.fr       */
+/*   Created: 2022/02/08 16:53:14 by acanterg          #+#    #+#             */
+/*   Updated: 2022/02/08 17:38:12 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
-#include "PhoneBook.hpp"
+#include <iostream>
 
-int main()
-{
-	PhoneBook pb;
-	std::string cmd;
+int	main() {
 
-	while(1)
-	{
-		std::cout << C_GREEN << "Enter a command: " << C_END;
-		std::getline(std::cin >> std::ws, cmd);
-		if (cmd == "EXIT")
-			break;
-		else if (cmd == "ADD")
-			pb.add();
-		else if (cmd == "SEARCH")
-			pb.search();
-		else
-			std::cout << C_RED << "Command not found: " << cmd << " - Try ADD, SEARCH or EXIT" << C_END << std::endl;
-	}
-	
-	return (0);
+	std::string str = "HI THIS IS BRAIN";
+
+	std::string *stringPTR = &str;
+	std::string &stringREF = str;
+
+	std::cout << "Mem. Address str       -> " << &str << std::endl;
+	std::cout << "Mem. Address stringPTR -> " << stringPTR << std::endl;
+	std::cout << "Mem. Address stringREF -> " << &stringREF << std::endl;
+
+	std::cout << "Val. Pointed str       -> " << str << std::endl;
+	std::cout << "Val. Pointed stringPTR -> " << *stringPTR << std::endl;
+	std::cout << "Val. Pointed stringREF -> " << stringREF << std::endl;
+
+	return 0;
 }
+

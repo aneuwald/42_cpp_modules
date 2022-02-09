@@ -1,46 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.hpp                                :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/07 17:57:11 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/08 00:47:30 by acanterg         ###   ########.fr       */
+/*   Created: 2022/02/08 16:31:42 by acanterg          #+#    #+#             */
+/*   Updated: 2022/02/08 16:58:31 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_CLASS_HPP
-# define PHONEBOOK_CLASS_HPP
+#ifndef SOMBIE_HPP
+# define ZOMBIE_HPP
 
 # include <iostream>
-# include <iomanip>
-# include <string>
-# include "Contact.class.hpp"
 
-# define MAX_CONTACTS 8
-
-# define C_RED "\033[1;31m"
-# define C_GREEN "\033[1;32m"
-# define C_YELLOW "\033[1;33m"
-# define C_END "\033[0m"
-
-class PhoneBook {
-
-private:
-	Contact _contacts[MAX_CONTACTS];
-	int		_size;
-
-	void _printAll();
-
+class Zombie {
 
 public:
-	PhoneBook();
-	~PhoneBook();
-	
-	void add();
-	void search();
 
+	Zombie(std::string name);
+	~Zombie();
+	void announce();
+
+private:
+	std::string name;
 };
+
+void randomChump(std::string name);
+Zombie *newZombie(std::string name);
 
 #endif

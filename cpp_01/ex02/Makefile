@@ -6,23 +6,27 @@
 #    By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 17:18:31 by acanterg          #+#    #+#              #
-#    Updated: 2022/02/08 16:28:50 by acanterg         ###   ########.fr        #
+#    Updated: 2022/02/08 17:32:12 by acanterg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = megaphone.cpp
-NAME = megaphone
+SRC = main.cpp
+      
+NAME = Moarbrainz
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 $(NAME):	
 			@$(CC) $(CFLAGS) $(SRC) -o $(NAME)
-			
+
+test:		re
+			./$(NAME)
+
 all:		$(NAME)
 
 clean:
-		rm -rf $(NAME)
+			rm -rf $(NAME)
 
-fclean: clean
+fclean: 	clean
 
 re: fclean all
