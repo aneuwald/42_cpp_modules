@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:47:21 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/13 23:29:21 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/02/13 23:29:37 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	Fixed();
 	~Fixed();
     Fixed (const Fixed &fixed);
-	Fixed(const int num);
+	Fixed (const int num);
 	Fixed(const float num);
     Fixed & operator= (const Fixed &fixed);
 

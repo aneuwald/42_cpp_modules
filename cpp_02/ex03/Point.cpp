@@ -1,44 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:48:32 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/13 23:38:31 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/02/14 00:24:36 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Point.hpp"
 
-Fixed::Fixed(): _fpNumber(0) {
-	std::cout << "Default constructor called" << std::endl;
+Point::Point(): x(0), y(0) {
 	return;
 }
 
-Fixed::~Fixed() {
-	std::cout << "Destructor called" << std::endl;
+Point::~Point() {
 	return;
 }
 
-Fixed::Fixed(const Fixed &fixed) {
-	std::cout << "Copy constructor called" << std::endl;
-	*this = fixed;
+Point::Point(const Point &point) {
+	*this = point;
+}
+
+Point::Point(Fixed const x, Fixed const y): x(x), y(y) {
 	return;
 }
 
-Fixed & Fixed::operator= (const Fixed &fixed) {
-	std::cout << "Copy assignment operator called" << std::endl;
-	_fpNumber = fixed.getRawBits();
+Point & Point::operator= (const Point &point) {
+	x = point.getX();
+	y = point.getY();
 	return (*this);
 }
 
-int Fixed::getRawBits() const {
-	std::cout << "getRawBits member function called" << std::endl;
-	return (_fpNumber);
+Fixed Point::getX() const{
+	return (this->x);
 }
-
-void Fixed::setRawBits(int const raw) {
-	_fpNumber = raw;
+Fixed Point::getY() const {
+	return (this->y);
 }

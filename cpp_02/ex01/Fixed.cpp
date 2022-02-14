@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:48:32 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/09 17:34:38 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/02/13 23:38:57 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Fixed::~Fixed() {
 
 Fixed::Fixed(const Fixed &fixed) {
 	std::cout << "Copy constructor called" << std::endl;
-	_fpNumber = fixed.getRawBits();
+	*this = fixed;
 	return;
 }
 
