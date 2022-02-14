@@ -6,36 +6,45 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:53:14 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/14 10:05:22 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/02/14 10:15:00 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
 	std::cout << " == CONSTRUCTORS == " << std::endl;
-	ClapTrap a ("Arnold");
-	ClapTrap b;
+	ScavTrap a ("Arnold");
+	ScavTrap b;
+	ScavTrap c ("Warrior");
 
 	std::cout << std::endl << " == A ACTIONS == " << std::endl;
 	a.attack("Captain America");
-	a.beRepaired(4);
+	a.beRepaired(10);
 	a.takeDamage(3);
-	a.takeDamage(30);
+	a.takeDamage(90);
 	a.attack("Hulk");
 	a.beRepaired(10);
 	a.takeDamage(50);
+	a.guardGate();
 
 	std::cout << std::endl << " == B ACTIONS == " << std::endl;
 	b.attack("Iron Man");
-	b.takeDamage(9);
-	b.beRepaired(2);
-	b.takeDamage(3);
+	b.takeDamage(90);
+	b.beRepaired(200);
+	b.takeDamage(15);
 	b.attack("Thor");
+	b.guardGate();
+	b.guardGate();
 	
+	std::cout << std::endl << " == C ENERGY TEST == " << std::endl;
+	for (int i = 0; i < 51; i++)
+		c.attack("ENERGY TEST");
+
 	std::cout << std::endl << " == DESTRUCTORS == " << std::endl;
+
 	return(0);
     
 }
