@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:48:32 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/14 00:24:36 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/02/14 08:22:59 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,10 @@ Point::Point(Fixed const x, Fixed const y): x(x), y(y) {
 }
 
 Point & Point::operator= (const Point &point) {
-	x = point.getX();
-	y = point.getY();
+	if (this != &point) {
+		x = point.getX();
+		y = point.getY();
+	}
 	return (*this);
 }
 
