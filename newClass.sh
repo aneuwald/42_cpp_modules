@@ -4,19 +4,12 @@ class=$1
 class_lower=${class,}
 class_upper=${class^^}
 
-echo $class
-echo $class_lower
+echo Creating $class class files...
 
-echo "
-#include \"$class.hpp\"
+echo "#include \"$class.hpp\"
 
 $class::$class(): _value(0) {
 	std::cout << \"Default constructor called\" << std::endl;
-	return;
-}
-
-$class::$class(int const value): _value(value) {
-	std::cout << \"Default constructor with param called\" << std::endl;
 	return;
 }
 
@@ -34,24 +27,13 @@ $class::$class(const $class &$class_lower) {
 $class & $class::operator= (const $class &$class_lower) {
 	std::cout << \"Copy assignment operator called\" << std::endl;
 	if (this != &$class_lower) {
-		_value = $class_lower.getValue();
+		_value = $class_lower._value;
 	}
 	return (*this);
 }
-
-void $class::setValue (int const value) {
-	std::cout << \"Setting value from \" << _value << \" to \" << value <<std::endl;
-	_value = value;
-}
-
-int $class::getValue () const {
-	std::cout << \"Getting value: \" << _value <<std::endl;
-	return (_value);
-}
 " > "$class".cpp
 
-echo "
-#ifndef "$class_upper"_HPP
+echo "#ifndef "$class_upper"_HPP
 # define "$class_upper"_HPP
 
 # include <iostream>
@@ -63,13 +45,9 @@ private:
 	
 public:
 	$class();
-	$class(int const value);
 	~$class();
     $class (const $class &$class_lower);
     $class & operator= (const $class &$class_lower);
-
-	void setValue(int const value);
-	int getValue() const;
 
 };
 
