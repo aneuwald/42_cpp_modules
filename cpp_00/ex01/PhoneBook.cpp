@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 17:57:11 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/08 21:01:46 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/02/28 18:59:00 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,13 @@ PhoneBook::~PhoneBook() {
 }
 
 void PhoneBook::add() {
-	if (this->_size == MAX_CONTACTS) this->_size--;
-	this->_contacts[this->_size].create(this->_size);
-	if (this->_size < MAX_CONTACTS) this->_size++;
+	if (this->_size < MAX_CONTACTS) {
+		this->_contacts[this->_size].create(this->_size);
+		this->_size++;
+	}
+	else {
+		this->_contacts[0].create(0);
+	}
 	return;
 }
 
