@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 17:57:11 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/28 18:59:00 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/02/28 19:24:43 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void PhoneBook::search() {
 		return ;
 	}
 
-	std::cout << C_RED << "Index not found! Try use index -1 to check all the PhoneBook entries!" << C_END << std::endl;
+	std::cout << C_RED << "Index not found! Try to check the list above!" << C_END << std::endl;
 	return;
 }
 
