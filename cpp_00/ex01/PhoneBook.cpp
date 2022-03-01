@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 17:57:11 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/28 19:24:43 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/01 16:02:30 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,8 @@ PhoneBook::~PhoneBook() {
 }
 
 void PhoneBook::add() {
-	if (this->_size < MAX_CONTACTS) {
-		this->_contacts[this->_size].create(this->_size);
-		this->_size++;
-	}
-	else {
-		this->_contacts[0].create(0);
-	}
+	this->_contacts[this->_size % MAX_CONTACTS].create(this->_size % MAX_CONTACTS);
+	this->_size++;
 	return;
 }
 
@@ -49,7 +44,9 @@ void PhoneBook::search() {
 		return ;
 	}
 
-	if (index >= 0 && index < this->_size) {
+	int limit = (this->_size >= MAX_CONTACTS) ? MAX_CONTACTS : this->_size;
+
+	if (index >= 0 && index < limit) {
 		this->_contacts[index].showFull();
 		return ;
 	}
@@ -62,7 +59,9 @@ void PhoneBook::_printAll() {
 	std::cout << "        ID|First Name| Last Name|  Nickname|" << std::endl;
 	std::cout << "--------------------------------------------" << std::endl;
 
-	for (int i = 0; i < this->_size; i++) {
+	int limit = (this->_size >= MAX_CONTACTS) ? MAX_CONTACTS : this->_size;
+
+	for (int i = 0; i < limit; i++) {
 		this->_contacts[i].show();
 	}
 	return;

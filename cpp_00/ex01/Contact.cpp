@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 17:57:59 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/08 21:01:53 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/01 16:00:34 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void Contact::show() {
 	std::cout << std::setw(10) << this->_id  << "|"
 		<< std::setw(10) << getCompact(this->_firstName) << "|"
 		<< std::setw(10) << getCompact(this->_lastName) << "|"
-		<< std::setw(10) << getCompact(this->_lastName) << "|"
+		<< std::setw(10) << getCompact(this->_nickname) << "|"
 		<< std::endl;
 
 	return;
