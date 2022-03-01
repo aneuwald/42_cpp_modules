@@ -6,21 +6,15 @@
 #    By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 17:18:31 by acanterg          #+#    #+#              #
-#    Updated: 2022/03/01 23:37:44 by acanterg         ###   ########.fr        #
+#    Updated: 2022/03/01 23:28:51 by acanterg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 MAKEFLAGS += --silent
 
-SRC 	= 	main.cpp \
-			Animal.cpp \
-			Cat.cpp \
-			Dog.cpp \
-			WrongAnimal.cpp \
-			WrongCat.cpp
+SRC 	= 	main.cpp
 
-      
-NAME 	=	polymorphism
+NAME 	=	interfaceRecap
 CC		=	c++
 FLAGS	=	-Wall -Wextra -Werror -std=c++98
 FSANIT	=	-fsanitize=address -g
