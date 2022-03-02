@@ -2,8 +2,12 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
-# include <cstdlib>
+# include <stdlib.h>
 # include <ctime>
+
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat {
 
@@ -27,6 +31,9 @@ public:
 	void incrementGrade(const int &grade) ;
 	void decrementGrade();
 	void decrementGrade(const int &grade) ;
+
+	void signForm(Form& form);
+	void executeForm(Form& form) const;
 
 	class GradeTooHighException : public std::exception
 	{
