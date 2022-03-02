@@ -9,23 +9,23 @@ echo Creating $class class files...
 echo "#include \"$class.hpp\"
 
 $class::$class(): _value(0) {
-	std::cout << \"[$class_upper] Default constructor called\" << std::endl;
+	//std::cout << \"[$class_upper] Default constructor called\" << std::endl;
 	return;
 }
 
 $class::~$class() {
-	std::cout << \"[$class_upper] Destructor called\" << std::endl;
+	//std::cout << \"[$class_upper] Destructor called\" << std::endl;
 	return;
 }
 
 $class::$class(const $class &$class_lower) {
-	std::cout << \"[$class_upper] Copy constructor called\" << std::endl;
+	//std::cout << \"[$class_upper] Copy constructor called\" << std::endl;
 	*this = $class_lower;
 	return;
 }
 
 $class & $class::operator= (const $class &$class_lower) {
-	std::cout << \"[$class_upper] Copy assignment operator called\" << std::endl;
+	//std::cout << \"[$class_upper] Copy assignment operator called\" << std::endl;
 	if (this != &$class_lower) {
 		_value = $class_lower._value;
 	}

@@ -6,7 +6,7 @@
 #    By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 17:18:31 by acanterg          #+#    #+#              #
-#    Updated: 2022/03/02 10:09:08 by acanterg         ###   ########.fr        #
+#    Updated: 2022/03/02 10:34:11 by acanterg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,14 +36,11 @@ $(NAME):	$(OBJ)
 			$(CC) $(FLAGS) $(FSANIT) $(SRC) -o $(NAME)
 			printf "$(C_GREEN)DONE$(C_END)\n"
 
-test:		re
-			./$(NAME)
-			@rm -rf $(NAME)
 
 all:		$(NAME)
 
 clean:
-			printf "Deleting .o ... "
+			printf "Deleting .o folder ... "
 			rm -rf $(DIR_OBJ)
 			printf "$(C_GREEN)DONE$(C_END)\n"
 
@@ -51,6 +48,10 @@ fclean: 	clean
 			printf "Deleting $(NAME) ... "
 			rm -rf $(NAME)
 			printf "$(C_GREEN)DONE$(C_END)\n"
+
+test:		re
+			./$(NAME)
+			$(MAKE) fclean
 
 re: fclean all
 

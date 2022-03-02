@@ -6,7 +6,7 @@
 #    By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 17:18:31 by acanterg          #+#    #+#              #
-#    Updated: 2022/03/01 23:38:47 by acanterg         ###   ########.fr        #
+#    Updated: 2022/03/02 10:34:11 by acanterg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,12 +36,12 @@ $(NAME):	$(OBJ)
 
 test:		re
 			./$(NAME)
-			@rm -rf $(NAME)
+			$(MAKE) fclean
 
 all:		$(NAME)
 
 clean:
-			printf "Deleting .o ... "
+			printf "Deleting .o folder ... "
 			rm -rf $(DIR_OBJ)
 			printf "$(C_GREEN)DONE$(C_END)\n"
 
