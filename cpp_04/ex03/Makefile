@@ -6,13 +6,18 @@
 #    By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 17:18:31 by acanterg          #+#    #+#              #
-#    Updated: 2022/03/01 23:28:51 by acanterg         ###   ########.fr        #
+#    Updated: 2022/03/02 10:09:08 by acanterg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 MAKEFLAGS += --silent
 
-SRC 	= 	main.cpp
+SRC 	= 	main.cpp \
+			AMateria.cpp \
+			Ice.cpp \
+			Cure.cpp \
+			MateriaSource.cpp \
+			Character.cpp
 
 NAME 	=	interfaceRecap
 CC		=	c++
