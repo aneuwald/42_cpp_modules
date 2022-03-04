@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 10:37:56 by acanterg          #+#    #+#             */
-/*   Updated: 2022/03/03 11:50:42 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/04 09:28:17 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int main () {
 
 	delete formPres;
 	delete formRobo;
-	delete formShru;
+	//delete formShru;
 	delete formWrong;
 
 	return (0);
