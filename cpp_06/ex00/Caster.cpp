@@ -44,7 +44,7 @@ type	Caster::getType() {
 	int	num;
 	iss >> num;
 	if (iss.eof() && !iss.fail())
-		return (T_INT);
+		return (T_NUM);
 
 	iss.clear();
 	iss.seekg (0, std::istringstream::beg);
@@ -55,7 +55,7 @@ type	Caster::getType() {
 	iss >> num_f;
 	iss >> f;
 	if (f == "f" && iss.eof() && !iss.fail())
-		return (T_FLOAT);
+		return (T_NUM);
 
 	iss.clear();
 	iss.seekg (0, std::istringstream::beg);
@@ -64,7 +64,7 @@ type	Caster::getType() {
 	double num_d;
 	iss >> num_d;
 	if (iss.eof() && !iss.fail())
-		return (T_DOUBLE);
+		return (T_NUM);
 
 	/* SPECIAL TEST */
 	std::string strings[] = { "-inf", "+inf", "nan", "-inff", "+inff", "nanf" };

@@ -8,9 +8,7 @@
 
 enum type {
 	T_CHAR,
-	T_INT,
-	T_FLOAT,
-	T_DOUBLE,
+	T_NUM,
 	T_SPECIAL,
 	T_SPECIAL_F,
 	T_IMPOSSIBLE
