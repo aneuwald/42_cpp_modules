@@ -6,11 +6,19 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 11:57:12 by acanterg          #+#    #+#             */
-/*   Updated: 2022/03/06 12:11:26 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/06 12:22:19 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include <iostream>
+#include <stdint.h>
+
+struct Data
+{
+	std::string name;
+	int			age;
+	bool		male;	
+};
 
 uintptr_t serialize(Data* ptr)
 {
