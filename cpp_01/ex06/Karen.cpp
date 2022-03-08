@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:48:32 by acanterg          #+#    #+#             */
-/*   Updated: 2022/03/08 10:08:29 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 10:09:12 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void Karen::complain(std::string level)
 	int index = -1;
 	std::string options[] = {"DEBUG", "INFO", "WARNING", "ERROR" };
 	
-	// Find index, if exist in options[]
+	// set index, if exist in options[]
 	while (++index < MAX_OPTIONS)
 		if (options[index] == level)
 				break ;
