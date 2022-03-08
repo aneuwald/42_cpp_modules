@@ -6,20 +6,21 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:53:14 by acanterg          #+#    #+#             */
-/*   Updated: 2022/03/07 11:03:13 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 09:40:26 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
+#define NBR_ZOMBIES 3
+#define NAME_ZOMBIES "Theo"
+
 int	main() {
 
-	Zombie *zombies = zombieHorde(4, "José"); 
+	Zombie *zombies = zombieHorde(NBR_ZOMBIES, NAME_ZOMBIES); 
 
-	zombies[0].announce();
-	zombies[1].announce();
-	zombies[2].announce();
-	zombies[3].announce();
+	for (int i = 0; i < NBR_ZOMBIES; i++)
+		zombies[i].announce();
 	
 	delete [] zombies;
 
