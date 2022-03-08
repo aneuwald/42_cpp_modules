@@ -6,14 +6,14 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 09:50:58 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/14 10:11:13 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 11:30:57 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(): ClapTrap() {
-	std::cout << "Default ScavTrap constructor called" << std::endl;
+	std::cout << "[ScavTrap] Default constructor called" << std::endl;
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap(): ClapTrap() {
 }
 
 ScavTrap::ScavTrap(std::string const name): ClapTrap(name) {
-	std::cout << "Default ScavTrap constructor with param called. New name: " << name << std::endl;
+	std::cout << "[ScavTrap] Default constructor with param called. New name: " << name << std::endl;
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
@@ -31,18 +31,18 @@ ScavTrap::ScavTrap(std::string const name): ClapTrap(name) {
 }
 
 ScavTrap::~ScavTrap() {
-	std::cout << "Destructor called for ScavTrap " << _name << std::endl;
+	std::cout << "[ScavTrap] Destructor called for " << _name << std::endl;
 	return;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &scavTrap): ClapTrap(scavTrap._name) {
-	std::cout << "Copy constructor ScavTrap called" << std::endl;
+	std::cout << "[ScavTrap] Copy constructor called" << std::endl;
 	*this = scavTrap;
 	return;
 }
 
 ScavTrap & ScavTrap::operator= (const ScavTrap &scavTrap) {
-	std::cout << "Copy assignment ScavTrap operator called" << std::endl;
+	std::cout << "[ScavTrap] Copy assignment operator called" << std::endl;
 	if (this != &scavTrap) {
 		_name = scavTrap._name;
 		_hitPoints = scavTrap._hitPoints;
@@ -67,16 +67,16 @@ void ScavTrap::attack(const std::string& target) {
 }
 
 void ScavTrap::guardGate() {
-	if (_hitPoints == 0) {
-		std::cout << "ScavTrap " << _name << " is already dead. Do you really want him guarding your gate?" << std::endl;
-		return ;
-	}
-	if (_hitPoints == 0) {
-		std::cout << "ScavTrap " << _name << " is already dead. Do you really want him guarding your gate?" << std::endl;
-		return ;
-	}
 	if (_isGuardingGate) {
 		std::cout << "ScavTrap " << _name << " is already guarding the gate!" << std::endl;
+		return ;
+	}
+	if (_hitPoints == 0) {
+		std::cout << "ScavTrap " << _name << " is already dead. Do you really want him guarding your gate?" << std::endl;
+		return ;
+	}
+	if (_energyPoints == 0) {
+		std::cout << "ScavTrap " << _name << " has no energy to guard the gate! Maybe guard the bedroom?" << std::endl;
 		return ;
 	}
 	_isGuardingGate = true;
