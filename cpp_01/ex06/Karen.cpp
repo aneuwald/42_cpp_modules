@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:48:32 by acanterg          #+#    #+#             */
-/*   Updated: 2022/03/08 10:09:12 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 10:13:20 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,13 +61,13 @@ void Karen::complain(std::string level)
 				break ;
 
 	switch (index) {
-		case 0:
+		case DEBUG:
 			Karen::debug();
-		case 1:
+		case INFO:
 			Karen::info();
-		case 2:
+		case WARNING:
 			Karen::warning();
-		case 3:
+		case ERROR:
 			Karen::error();
 			break;
 		default:

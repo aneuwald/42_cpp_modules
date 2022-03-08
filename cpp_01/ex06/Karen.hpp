@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:47:21 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/09 15:53:02 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 10:14:10 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,13 @@
 # define C_END "\033[0m"
 
 # define MAX_OPTIONS 4
+
+enum t_message {
+	DEBUG,
+	INFO,
+	WARNING,
+	ERROR
+};
 
 class Karen {
 
