@@ -6,25 +6,26 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:31:42 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/08 16:58:31 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 09:35:26 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SOMBIE_HPP
+#ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
 
 # include <iostream>
 
 class Zombie {
 
-public:
+private:
+	std::string _name;
 
+public:
+	Zombie();
 	Zombie(std::string name);
 	~Zombie();
 	void announce();
 
-private:
-	std::string name;
 };
 
 void randomChump(std::string name);
