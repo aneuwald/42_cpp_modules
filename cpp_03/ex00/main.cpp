@@ -6,18 +6,18 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:53:14 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/14 10:05:22 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 11:22:41 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "ClapTrap.hpp"
 
 int main()
 {
 	std::cout << " == CONSTRUCTORS == " << std::endl;
-	ClapTrap a ("Arnold");
+	ClapTrap a("Arnold");
 	ClapTrap b;
+	ClapTrap *c = new ClapTrap("Philip");
 
 	std::cout << std::endl << " == A ACTIONS == " << std::endl;
 	a.attack("Captain America");
@@ -34,8 +34,14 @@ int main()
 	b.beRepaired(2);
 	b.takeDamage(3);
 	b.attack("Thor");
+
+	std::cout << std::endl << " == C ACTIONS (NO ENERGY) == " << std::endl;
+	for (int i = 0; i < 11; i++)
+		c->attack("Some target...");
 	
+
 	std::cout << std::endl << " == DESTRUCTORS == " << std::endl;
+	delete c;
 	return(0);
     
 }
