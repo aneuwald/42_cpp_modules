@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:47:21 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/09 11:39:52 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 09:42:11 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Weapon {
 
 private:
-	std::string type;
+	std::string _type;
 	
 public:
 	Weapon(std::string type);

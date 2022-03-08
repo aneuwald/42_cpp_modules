@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:47:21 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/09 11:49:34 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 09:44:27 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 class HumanB {
 
 private:
-	std::string name;
-	Weapon *weapon;
+	std::string _name;
+	Weapon *_weapon;
 	
 public:
 	HumanB(std::string name);
