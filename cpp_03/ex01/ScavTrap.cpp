@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 09:50:58 by acanterg          #+#    #+#             */
-/*   Updated: 2022/03/08 11:30:57 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 11:32:07 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void ScavTrap::guardGate() {
 		return ;
 	}
 	if (_energyPoints == 0) {
-		std::cout << "ScavTrap " << _name << " has no energy to guard the gate! Maybe guard the bedroom?" << std::endl;
+		std::cout << "ScavTrap " << _name << " has no energy to guard the gate! Maybe he could guard a bed?" << std::endl;
 		return ;
 	}
 	_isGuardingGate = true;

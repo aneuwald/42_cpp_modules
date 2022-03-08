@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:53:14 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/14 10:15:00 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 11:31:49 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ int main()
 	std::cout << std::endl << " == C ENERGY TEST == " << std::endl;
 	for (int i = 0; i < 51; i++)
 		c.attack("ENERGY TEST");
-
+	c.guardGate();
+	
 	std::cout << std::endl << " == DESTRUCTORS == " << std::endl;
 
 	return(0);
