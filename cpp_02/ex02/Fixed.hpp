@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:47:21 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/13 23:29:21 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 10:44:23 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ public:
 	Fixed operator- (const Fixed &rhs) const;
 	Fixed operator* (const Fixed &rhs) const;
 	Fixed operator/ (const Fixed &rhs) const;
+	Fixed operator% (const Fixed &rhs) const;
 
     bool operator> (const Fixed &rhs);
     bool operator< (const Fixed &rhs);

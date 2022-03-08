@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:48:32 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/14 08:23:46 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 10:56:34 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,11 @@ Fixed Fixed::operator* (const Fixed &rhs) const {
 Fixed Fixed::operator/ (const Fixed &rhs) const {
 	//std::cout << "Division operator called" << std::endl;
 	return (Fixed(this->toFloat() / rhs.toFloat()));
+}
+
+Fixed Fixed::operator% (const Fixed &rhs) const {
+	//std::cout << "Division operator called" << std::endl;
+	return (Fixed(this->toInt() % rhs.toInt()));
 }
 
 bool Fixed::operator> (const Fixed &rhs) {
