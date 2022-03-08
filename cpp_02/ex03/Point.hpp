@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:47:21 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/14 00:24:05 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 11:08:39 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@
 class Point {
 
 private:
-	Fixed x;
-	Fixed y;
+	Fixed _x;
+	Fixed _y;
 	
 public:
 	Point();
 	Point(Fixed const x, Fixed const y);
+	Point(float x, float y);
 	~Point();
     Point (const Point &Point);
     Point & operator= (const Point &point);

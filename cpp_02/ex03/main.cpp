@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:53:14 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/14 00:48:06 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 11:05:46 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,17 @@ int main(void) {
 	testPoint(a, b, c, Point(10.0f, 0.1f), "Right above bottom edge");
 	testPoint(a, b, c, Point(10.1f, 30.0f), "Close to vertex B (out)");
 	testPoint(a, b, c, Point(10.0f, 29.9f), "Close to vertex B (in)");
+
+	std::cout << std::endl << "=== TESTS W/ FIXED ===" << std::endl;
+	testPoint(a, b, c, Point(Fixed(10), Fixed(15)), "On the middle .P");
+	testPoint(a, b, c, Point(Fixed(0), Fixed(0)), "On vertex A");
+	testPoint(a, b, c, Point(Fixed(10), Fixed(30)), "On vertex B");
+	testPoint(a, b, c, Point(Fixed(20), Fixed(0)), "On vertex C");
+	testPoint(a, b, c, Point(Fixed(10), Fixed(0)), "On bottom edge");
+	testPoint(a, b, c, Point(Fixed(10.0f), Fixed(-0.1f)), "Right below bottom edge");
+	testPoint(a, b, c, Point(Fixed(10.0f), Fixed(0.1f)), "Right above bottom edge");
+	testPoint(a, b, c, Point(Fixed(10.1f), Fixed(30.0f)), "Close to vertex B (out)");
+	testPoint(a, b, c, Point(Fixed(10.0f), Fixed(29.9f)), "Close to vertex B (in)");
 
 	return 0;
 }
