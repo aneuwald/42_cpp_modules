@@ -12,10 +12,9 @@
 
 MAKEFLAGS += --silent
 
-SRC = tests.cpp \
-      Account.cpp
-      
-NAME = thejobofmydreams
+SRC 	= 	main.cpp
+
+NAME 	=	array
 CC		=	clang++
 FLAGS	=	-Wall -Wextra -Werror -std=c++98
 FSANIT	=	-fsanitize=address
@@ -32,9 +31,6 @@ $(NAME):	$(OBJ)
 			$(CC) $(FLAGS) $(FSANIT) $(SRC) -o $(NAME)
 			printf "$(C_GREEN)DONE$(C_END)\n"
 
-test:		re
-			./$(NAME)
-			$(MAKE) fclean
 
 all:		$(NAME)
 
@@ -45,8 +41,12 @@ clean:
 
 fclean: 	clean
 			printf "Deleting $(NAME) ... "
-			rm -rf $(NAME)
+			rm -rf $(NAME) *_shrubbery
 			printf "$(C_GREEN)DONE$(C_END)\n"
+
+test:		re
+			./$(NAME) a
+			$(MAKE) fclean
 
 re: fclean all
 

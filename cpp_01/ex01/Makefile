@@ -6,7 +6,7 @@
 #    By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 17:18:31 by acanterg          #+#    #+#              #
-#    Updated: 2022/03/04 09:28:07 by acanterg         ###   ########.fr        #
+#    Updated: 2022/03/08 10:24:03 by acanterg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC = main.cpp \
       ZombieHorde.cpp
       
 NAME = HiThisIsBrain
-CC		=	c++
+CC		=	clang++
 FLAGS	=	-Wall -Wextra -Werror -std=c++98
 FSANIT	=	-fsanitize=address
 INCLUD	=	-I .
