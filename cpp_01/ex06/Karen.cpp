@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:48:32 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/09 14:58:54 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 09:17:00 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,22 +52,25 @@ void Karen::error()
 
 void Karen::complain(std::string level)
 {
-	int index, i;
+	int index = -1;
 	std::string options[] = {"DEBUG", "INFO", "WARNING", "ERROR" };
-	void (Karen::*arr_functions[])(void) = { &Karen::debug, &Karen::info, &Karen::warning, &Karen::error };
 	
-	index = MAX_OPTIONS;
-	for (i = 0; i < MAX_OPTIONS; i++) {
-		if (options[i] == level) {
-			index = i;
-			break ;
-		}
-	}
+	while (++index < MAX_OPTIONS)
+		if (options[index] == level)
+				break ;
 
-	if (index < MAX_OPTIONS)
-		for (i = index; i < MAX_OPTIONS; i++)
-			(this->*arr_functions[i])();
-	else
-		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+	switch (index) {
+		case 0:
+			Karen::debug();
+		case 1:
+			Karen::info();
+		case 2:
+			Karen::warning();
+		case 3:
+			Karen::error();
+			break;
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+	}
 
 }

@@ -6,7 +6,7 @@
 #    By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 17:18:31 by acanterg          #+#    #+#              #
-#    Updated: 2022/03/04 09:28:07 by acanterg         ###   ########.fr        #
+#    Updated: 2022/03/08 09:19:43 by acanterg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC = main.cpp \
 	  Karen.cpp
       
 NAME =  karenFilter
-CC		=	c++
+CC		=	clang++
 FLAGS	=	-Wall -Wextra -Werror -std=c++98
 FSANIT	=	-fsanitize=address
 INCLUD	=	-I .
@@ -33,7 +33,7 @@ $(NAME):	$(OBJ)
 			printf "$(C_GREEN)DONE$(C_END)\n"
 
 test:		re
-			./$(NAME)
+			./$(NAME) WARNING
 			$(MAKE) fclean
 
 all:		$(NAME)
