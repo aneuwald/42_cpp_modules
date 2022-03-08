@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:48:32 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/09 15:52:46 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 10:00:48 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,20 @@ void Karen::error()
 
 void Karen::complain(std::string level)
 {
+	int index = -1;
 	std::string options[] = {"DEBUG", "INFO", "WARNING", "ERROR" };
 	void (Karen::*arr_functions[])(void) = { &Karen::debug, &Karen::info, &Karen::warning, &Karen::error };
 
 	for (int i = 0; i < MAX_OPTIONS; i++)
-		if (options[i] == level) {
-			(this->*arr_functions[i])();
-			return ;
-		}
+		if (options[i] == level)
+			index = i;
+	
+	if (index == -1) {
+		std::cout << "[" << level << "] Level not implemented, sorry!" << std::endl;
+		return ;
+	}
+	
+	(this->*arr_functions[index])();
 
-	std::cout << "[" << level << "] Level not implemented, sorry!" << std::endl;
+		
 }
