@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:47:21 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/08 21:52:36 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 09:49:40 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ public:
 
 	bool openFile(std::string filename);
 	void replaceContent(std::string s1, std::string s2, std::size_t start = 0);
-	void printContent();
+	void printOriginal();
 	void printNewContent();
 	bool exportNewContent();
 };

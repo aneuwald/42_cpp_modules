@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 17:48:32 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/08 21:52:39 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 09:49:46 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void File::replaceContent(std::string s1, std::string s2, std::size_t start) {
 	replaceContent(s1, s2, next + s2.length());
 }
 
-void File::printContent() {
+void File::printOriginal() {
 	std::cout << _content << std::endl;
 }
 

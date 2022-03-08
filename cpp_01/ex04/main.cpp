@@ -6,11 +6,10 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 16:53:14 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/09 11:11:22 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/08 09:57:13 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "File.hpp"
 
 bool validation(int argc, char **argv)
