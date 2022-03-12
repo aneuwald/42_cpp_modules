@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 09:00:50 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/14 09:56:32 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/12 21:02:01 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ public:
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
+
+	int getHitPoints();
+	int getEnergyPoints();
+	int getAttackDamage();
 
 };
 

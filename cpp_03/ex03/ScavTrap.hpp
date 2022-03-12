@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 09:51:01 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/14 11:25:59 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/12 21:08:28 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 # include "ClapTrap.hpp"
 
-class ScavTrap : public virtual ClapTrap  {
+class ScavTrap : virtual public ClapTrap  {
 
 private:
 	bool _isGuardingGate;

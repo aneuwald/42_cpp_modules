@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 09:51:01 by acanterg          #+#    #+#             */
-/*   Updated: 2022/02/14 11:26:43 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/12 21:06:46 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include "FragTrap.hpp"
 # include "ScavTrap.hpp"
 
-class DiamondTrap : public FragTrap, public ScavTrap {
+class DiamondTrap : public ScavTrap, public FragTrap {
 
 private:
 	std::string _name;
@@ -31,7 +31,7 @@ public:
     DiamondTrap & operator= (const DiamondTrap &diamondTrap);
 
 	void whoAmI();
-	void attack(std::string const &target);
+	// void attack(std::string const &target);
 };
 
 #endif
