@@ -50,6 +50,7 @@ void Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterato
 int Span::shortestSpan() {
 	std::vector<int>::iterator it;
 	int	shortest = INT_MAX;
+	
 	if (_vector.size() < 2)
 		throw Span::NotEnoughNumbersException();
 
