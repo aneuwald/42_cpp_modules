@@ -34,28 +34,21 @@ Intern &Intern::operator=(const Intern &intern)
 
 Form *Intern::makeForm(const std::string &formName, const std::string &target)
 {
-	int index = -1;
-	std::string options[] = {FORM_PRES, FORM_ROBO, FORM_SHRU};
+	Form* form = NULL;
 	Form *(Intern::*arr_functions[])(const std::string &target) = {
 		&Intern::MakePresidentialPardonForm,
 		&Intern::MakeRobotomyRequestForm,
 		&Intern::MakeShrubberyCreationForm
 	};
 
-	for (int i = 0; i < MAX_OPTIONS; i++)
-		if (options[i] == formName)
-			index = i;
+    (formName == FORM_PRES) && (form = (this->*arr_functions[T_FORM_PRES])(target));
+    (formName == FORM_ROBO) && (form = (this->*arr_functions[T_FORM_ROBO])(target));
+    (formName == FORM_SHRU) && (form = (this->*arr_functions[T_FORM_SHRU])(target));
 
-	if (index == -1)
-	{
-		std::cout << "You should fire this intern! " << formName << " never ever EVER existed!" << std::endl;
-		return (0);
-	}
+	form && std::cout << "Intern created a " << formName << std::endl;
+	!form && std::cout << "You should fire this intern! " << formName << " never ever EVER existed!" << std::endl;
 
-	std::cout << "Intern created a " << formName << std::endl;
-	return ((this->*arr_functions[index])(target));
-
-	return (0);
+	return (form);
 }
 
 Form *Intern::MakePresidentialPardonForm(const std::string &target)

@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 10:37:56 by acanterg          #+#    #+#             */
-/*   Updated: 2022/03/15 01:18:19 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/15 09:42:16 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int main () {
 	formWrong = erick.makeForm("Game of Thrones Form", "Daenerys Targaryen");
 
 	std::cout << "\n===== TESTING =====" << std::endl;
-	//bureaucrat.signForm(*formPres);
+	bureaucrat.signForm(*formPres);
 	bureaucrat.executeForm(*formPres);
 	bureaucrat.signForm(*formRobo);
 	bureaucrat.executeForm(*formRobo);
@@ -45,7 +45,6 @@ int main () {
 	delete formPres;
 	delete formRobo;
 	delete formShru;
-	delete formWrong;
 
 	return (0);
 }
