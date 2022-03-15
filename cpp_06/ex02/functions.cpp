@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 12:40:43 by acanterg          #+#    #+#             */
-/*   Updated: 2022/03/06 21:36:32 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/15 01:24:27 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void identify(Base* p) {
 		std::cout << "?";
 	std::cout << std::endl;
 }
+
 void identify(Base& p) {
 	try {
 		dynamic_cast<A&>(p);
