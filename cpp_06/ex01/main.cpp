@@ -6,7 +6,7 @@
 /*   By: acanterg <acanterg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 11:57:12 by acanterg          #+#    #+#             */
-/*   Updated: 2022/03/06 12:22:19 by acanterg         ###   ########.fr       */
+/*   Updated: 2022/03/15 01:22:23 by acanterg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void printUser(Data user)
 {
 	std::cout << "Name: " << user.name << std::endl;
 	std::cout << "Age: " << user.age << std::endl;
-	std::cout << "Gender" << (user.male ? "Male" : "Female") << std::endl; 
+	std::cout << "Gender: " << (user.male ? "Male" : "Female") << std::endl; 
 }
 
 int main()
