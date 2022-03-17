@@ -50,12 +50,17 @@ type	Caster::getType() {
 	iss.seekg (0, std::istringstream::beg);
 
 	/* FLOAT TEST */
-	float		num_f;
+	int			num_f;
+	char		dot;
+	int			num_dec;
 	std::string	f;
+
 	iss >> num_f;
+	iss >> dot;
+	iss >> num_dec;
 	iss >> f;
-	if (f == "f" && iss.eof() && !iss.fail())
-		return (T_NUM);
+	if (f == "f" && dot == '.' && iss.eof() && !iss.fail())
+		return (T_FLOAT);
 
 	iss.clear();
 	iss.seekg (0, std::istringstream::beg);
@@ -80,10 +85,24 @@ type	Caster::getType() {
 void	Caster::setValue() {
 	std::istringstream	iss(_input);
 	char c;
+	int num_f;
+	int num_dec;
+	double num_dec_double;
 
 	if (_type == T_CHAR) {
 		iss >> c;
 		_value = c;
+		return ;
+	}
+	if (_type == T_FLOAT) {
+		iss >> num_f;
+		iss >> c; //dot
+		iss >> num_dec; // decimal part
+		_value = num_f;
+		num_dec_double = num_dec;
+		while (num_dec_double > 1) 
+			num_dec_double /= 10;
+		_value += num_dec_double;
 		return ;
 	}
 	iss >> _value;
