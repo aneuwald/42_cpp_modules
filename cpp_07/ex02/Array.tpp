@@ -60,7 +60,7 @@ T & Array<T>::operator[] (size_t index) {
 }
 
 template <typename T>
-T & Array<T>::operator[] (size_t index) const {
+const T & Array<T>::operator[] (size_t index) const {
 	if (index >= _size)
 		throw Array<T>::IndexOutOfBoundsException();
 	return (_arr[index]);

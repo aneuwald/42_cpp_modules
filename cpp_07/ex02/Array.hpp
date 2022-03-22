@@ -17,7 +17,7 @@ public:
     Array (size_t n);
     Array & operator= (const Array &array);
     T & operator[] (size_t index);
-    T & operator[] (size_t index) const;
+    const T & operator[] (size_t index) const;
 
 	size_t size() const;
 

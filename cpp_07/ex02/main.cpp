@@ -20,7 +20,9 @@ int main(int, char**)
     //SCOPE
     {
         Array<int> tmp = numbers;
-        Array<int> test(tmp);
+        const Array<int> test(tmp);
+        tmp[0] = 10;
+        // test[0] = 10; should give error!! Const can't be changed!
     }
 
     for (int i = 0; i < MAX_VAL; i++)
